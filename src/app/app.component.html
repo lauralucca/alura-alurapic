@@ -1,4 +1,7 @@
 <h1>{{ title }}</h1>
-<app-ap-photo url="https://www.criptomoedasfacil.com/wp-content/uploads/2018/11/74e53faa3d7e2fbc.jpg" description="closeup red fox"></app-ap-photo>
-<app-ap-photo url="https://www.thesprucepets.com/thmb/zinFVqG8PMrlPRKS2ogZbMvkIts=/450x0/filters:no_upscale():max_bytes(150000):strip_icc()/fennec-fox-85120553-57ffe0d85f9b5805c2b03554.jpg" description="fennec fox"></app-ap-photo>
-<app-ap-photo url="https://www.nationalgeographic.com/content/dam/animals/thumbs/rights-exempt/mammals/a/arctic-fox_thumb.ngsversion.1483558357556.adapt.1900.1.JPG" description="arctic fox"></app-ap-photo>
+
+<app-ap-photo
+    *ngFor="let photo of photos"
+    [url]="photo.url"
+    [description]="photo.description">
+</app-ap-photo>
